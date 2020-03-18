@@ -21,14 +21,14 @@ steps:
     forceRepoUpdate: true
     projectDirectory: '$(system.defaultWorkingDirectory)'
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
-  
+
 - task: Xcode@5
   inputs:
     actions: 'build'
     scheme: 'FeedMe'
     sdk: 'iphoneos'
     configuration: 'Release'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    xcWorkspacePath: 'FeedMe.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
     
 
