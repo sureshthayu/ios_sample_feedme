@@ -35,5 +35,5 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: false
-    signingOption: 'auto'
-    teamId: 'UY48DQR2XB'
+    signingOption: 'manual'
+    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
