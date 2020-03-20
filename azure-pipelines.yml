@@ -41,7 +41,8 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: true
-    exportArgs: 'Automatic Test'
-    signingOption: 'default'
+    exportArgs: 'Automatic Export Test'
+    signingOption: 'auto'
+    teamId: 'UY48DQR2XB'
     
 
