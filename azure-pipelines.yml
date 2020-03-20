@@ -39,10 +39,7 @@ steps:
     sdk: 'iphoneos'
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
-    packageApp: true
-    exportOptions: 'plist'
-    exportOptionsPlist: 'ExportOptionList.plist'
-    exportArgs: 'Automatic Export Test'
+    packageApp: false
     signingOption: 'auto'
     teamId: 'UY48DQR2XB'
     useXcpretty: false
