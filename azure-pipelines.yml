@@ -40,8 +40,11 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: true
+    exportOptions: 'plist'
+    exportOptionsPlist: 'ExportOptionList.plist'
     exportArgs: 'Automatic Export Test'
     signingOption: 'auto'
     teamId: 'UY48DQR2XB'
+    useXcpretty: false
     
 
