@@ -41,7 +41,7 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: false
-    signingOption: 'manual'
+    signingOption: 'auto'
     useXcpretty: false
     
 
