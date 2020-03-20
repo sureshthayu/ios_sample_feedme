@@ -31,6 +31,7 @@ steps:
   inputs:
     certSecureFile: 'std_Certificates.p12'
     certPwd: '$(certpwd)'
+    keychain: 'temp'
 
 - task: Xcode@5
   inputs:
@@ -40,8 +41,7 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: false
-    signingOption: 'auto'
-    teamId: 'UY48DQR2XB'
+    signingOption: 'manual'
     useXcpretty: false
     
 
