@@ -36,4 +36,4 @@ steps:
     scheme: 'FeedMe'
     packageApp: false
     signingOption: 'manual'
-    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
