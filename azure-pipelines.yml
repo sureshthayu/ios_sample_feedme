@@ -41,7 +41,9 @@ steps:
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: false
-    signingOption: 'auto'
+    signingOption: 'manual'
+    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
     useXcpretty: false
     
 
