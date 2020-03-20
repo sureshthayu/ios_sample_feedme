@@ -31,7 +31,6 @@ steps:
   inputs:
     certSecureFile: 'std_Certificates.p12'
     certPwd: '$(certpwd)'
-    keychain: 'temp'
 
 - task: Xcode@5
   inputs:
