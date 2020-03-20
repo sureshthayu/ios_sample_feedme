@@ -42,7 +42,6 @@ steps:
     scheme: 'FeedMe'
     packageApp: true
     exportArgs: 'Automatic Test'
-    signingOption: 'auto'
-    teamId: 'UY48DQR2XB'
+    signingOption: 'default'
     
 
