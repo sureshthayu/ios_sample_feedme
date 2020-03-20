@@ -11,6 +11,16 @@ pool:
 
 steps:
 
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'MyCertificates.p12'
+    certPwd: '$(MCPwd)'
+    keychain: 'temp'
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'testpn_ios_profile2.mobileprovision'
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
@@ -20,8 +30,10 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    scheme: 'FeedMe'
-    sdk: 'iphoneos'
     configuration: 'Release'
+    sdk: 'iphoneos'
     xcWorkspacePath: 'FeedMe.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    scheme: 'FeedMe'
+    packageApp: false
+    signingOption: 'auto'
+    teamId: 'UY48DQR2XB'
