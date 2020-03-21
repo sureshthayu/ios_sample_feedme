@@ -39,7 +39,9 @@ steps:
     sdk: 'iphoneos'
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
-    packageApp: false
+    packageApp: true
+    exportOptions: 'specify'
+    exportMethod: 'development'
     signingOption: 'manual'
     signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
