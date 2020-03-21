@@ -36,7 +36,16 @@ steps:
     certPwd: '$(certpwd)'
     keychain: 'temp'
 
-
+- task: Xcode@5
+  inputs:
+    actions: 'build'
+    xcWorkspacePath: 'FeedMe.xcworkspace'
+    scheme: 'FeedMe'
+    packageApp: true
+    signingOption: 'manual'
+    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+    useXcpretty: false
 
 - task: CopyFiles@2
   inputs:
