@@ -13,10 +13,9 @@ steps:
 - script: /usr/local/bin/pod install
   displayName: 'pod install using a script'
 
-
 - task: CmdLine@2
   inputs:
-  script: 'npm install -g firebase-tools'
+    script: 'npm install -g firebase-tools'
       
 - task: CocoaPods@0
   inputs:
@@ -46,7 +45,6 @@ steps:
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
     useXcpretty: false
     
-
 
 - task: Bash@3
   inputs:
