@@ -35,8 +35,6 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    configuration: 'Release'
-    sdk: 'iphoneos'
     xcWorkspacePath: 'FeedMe.xcworkspace'
     scheme: 'FeedMe'
     packageApp: true
@@ -45,4 +43,12 @@ steps:
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
     useXcpretty: false
     
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      PROJECT_NAME="FeedMe"
+      BUILD_DIR="Output/$(SDK)/$(Configuration)"
+      
+      firebase appdistribution:distribute "${BUILD_DIR}/${PROJECT_NAME}".ipa --app 1:251123050848:ios:1205bf14193485d455d605 --groups test_group
 
