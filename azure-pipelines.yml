@@ -15,8 +15,10 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm install -g firebase-tools'
-      
+    script: |
+      npm install -g firebase-tools
+
+
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
@@ -34,16 +36,7 @@ steps:
     certPwd: '$(certpwd)'
     keychain: 'temp'
 
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    xcWorkspacePath: 'FeedMe.xcworkspace'
-    scheme: 'FeedMe'
-    packageApp: true
-    signingOption: 'manual'
-    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
-    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
-    useXcpretty: false
+
     
 
 - task: Bash@3
@@ -53,5 +46,5 @@ steps:
       PROJECT_NAME="FeedMe"
       BUILD_DIR="Output/$(SDK)/$(Configuration)"
       
-      firebase appdistribution:distribute "${BUILD_DIR}/${PROJECT_NAME}".ipa --app 1:251123050848:ios:1205bf14193485d455d605 --groups test_group
+      firebase appdistribution:distribute "${BUILD_DIR}/${PROJECT_NAME}".ipa --app 1:251123050848:ios:1205bf14193485d455d605 --groups test_group --token "1//0gWhDnpyydr90CgYIARAAGBASNwF-L9IrEFBxHa9aDMWzqdCmIP9JFEvsPi0dxkMJxvo-rj9Z_EraXVD6-egeLf6H5bOvEkyduKw"
 
