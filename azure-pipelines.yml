@@ -44,7 +44,7 @@ steps:
     targetType: 'inline'
     script: |
       PROJECT_NAME="FeedMe"
-      BUILD_DIR="Output/$(SDK)/$(Configuration)"
+      BUILD_DIR="$(System.DefaultWorkingDirectory)/Output/$(SDK)/$(Configuration)"
       
       firebase appdistribution:distribute "${BUILD_DIR}/${PROJECT_NAME}".ipa --app 1:251123050848:ios:1205bf14193485d455d605 --groups test_group --token "1//0gWhDnpyydr90CgYIARAAGBASNwF-L9IrEFBxHa9aDMWzqdCmIP9JFEvsPi0dxkMJxvo-rj9Z_EraXVD6-egeLf6H5bOvEkyduKw"
 
